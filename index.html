@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1 class="title">Text Editor</h1>
+    </nav>
+    <main>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn" onclick="makeBold(this)" id="bold">Bold</button>
+                <button type="button" class="btn" onclick="makeItalic(this)" id="italic">Italic</button>
+                <button type="button" class="btn" onclick="makeUnderline(this)" id="underline">Underline</button>
+                <button type="button" class="btn align" id="left-align" onclick="alignText(this, 'left')" >left</button>
+                <button type="button" class="btn align" id="center-align" onclick="alignText(this, 'center')" >center</button>
+                <button type="button" class="btn align" id="right-align" onclick="alignText(this, 'right')" >right</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                
+                    <label for="text-input">Your Document Text</label>
+                    <textarea name="input" id="text-input" cols="30" rows="10" oninput="updateText()"></textarea>
+                
+            </div>
+                <div class="col">
+                    <label for="text-input">Formatted Text</label>
+                    <div id="text-output" class="format-output"></div>
+                </div>
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>
